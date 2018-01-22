@@ -1,0 +1,3 @@
+function ceres_etcd {
+	ETCDCTL_API=3 ETCDCTL_ENDPOINTS=10.39.25.23:2379,10.39.25.24:2379,10.39.25.25:2379 etcdctl $@
+}

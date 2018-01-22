@@ -1,0 +1,10 @@
+nvim/plugged
+nvim/swaps
+nvim/undo
+nvim/fzf-history
+
+gcloud
+configstore
+vnote
+tmuxinator
+gocode
