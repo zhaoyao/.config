@@ -26,10 +26,11 @@ zplug "~/.zsh", from:local
 # zplug 'dracula/zsh', as:theme
 #zplug 'oskarkrawczyk/honukai-iterm-zsh', as:theme
 
-zplug mafredri/zsh-async, from:github
-zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
+zplug "mafredri/zsh-async", from:github
+zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+#zplug 'simnalamburt/shellder', as:theme
 
-zplug 'supercrabtree/k'
+zplug "supercrabtree/k"
 
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -55,3 +56,8 @@ if [ -f '/Users/zhaoyao/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/zh
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/zhaoyao/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/zhaoyao/google-cloud-sdk/completion.zsh.inc'; fi
+
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+export DYLD_LIBRARY_PATH=$(rustc --print sysroot)/lib:$DYLD_LIBRARY_PATH
